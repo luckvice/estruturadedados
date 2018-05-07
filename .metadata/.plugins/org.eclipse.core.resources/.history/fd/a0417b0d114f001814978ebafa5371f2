@@ -1,0 +1,41 @@
+package linkedListOrder;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Lista<Integer> l = new Lista();
+		
+		l.adicionaFirst(10);
+		l.adicionaFirst(2);
+		l.adicionaFirst(8);
+		l.adicionaFirst(5);
+
+		System.out.println(l.getTotalDeElementos());
+		
+		//System.out.println(l.getPosNode(3));
+		
+		int vet[]= {10,2,8,6,1};
+		int aux, i, j;
+
+		for (i=1; i <vet.length; i++){
+			aux = vet[i];
+			j= i-1;
+			while (aux< vet[j] && j>= 0){
+				vet[j+1] = vet[j];
+				j--;
+			}
+			vet[j+1] = aux;
+		}
+		
+		int b;
+		for (b=0; b< tam; b++){
+			System.out.println("%d ", vet[b]);
+		}
+		System.out.println("\n");
+		//l.print();
+		
+	}
+
+}

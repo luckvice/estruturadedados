@@ -1,0 +1,35 @@
+package linkedListOrder;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Lista<Integer> l = new Lista();
+		
+		l.adicionaFirst(2);
+		l.adicionaFirst(1);
+		l.adicionaFirst(4);
+		l.adicionaFirst(3);
+
+		System.out.println(l.getTotalDeElementos());
+		
+		//System.out.println(l.getPosNode(3));
+		int aux, i, j;
+
+		for (i=0; i <l.getTotalDeElementos() ; i++){
+			aux = l.getPosNode(i);
+			System.out.println(aux);
+			j= i-1;
+			System.out.println(j);
+			while (aux< l.getPosNode(j) && j>= 0){
+				l.adicionaNapos(j+1, l.getPosNode(j));
+				j--;
+			}
+			l.adicionaNapos(j+1,aux);
+		}
+		l.print();
+		
+	}
+
+}

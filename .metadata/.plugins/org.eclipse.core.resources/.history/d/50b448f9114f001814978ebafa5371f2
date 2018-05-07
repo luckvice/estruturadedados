@@ -1,0 +1,34 @@
+package linkedListOrder;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Lista<Integer> l = new Lista();
+		
+		l.adicionaFirst(10);
+		l.adicionaFirst(2);
+		l.adicionaFirst(8);
+		l.adicionaFirst(5);
+
+		System.out.println(l.getTotalDeElementos());
+		
+		//System.out.println(l.getPosNode(3));
+		
+		int vet[]= {10,2,8,6,1};
+	/*	for (int i = 0; i < vet.length; i++)  {
+		    int a = vet[i];  
+		    for (int j = i - 1; j >= 0 & vet[j] > a; j--)   {  // loop for utilizando o operador Condicional E comum (bitwise)
+		    	vet[j + 1] = vet[j];  
+		    	vet[j] = a;  
+		    }                         
+		}
+		*/
+		for(int y = 0; y < vet.length; y++) {
+			System.out.println(vet[y]);
+		}
+		
+	}
+
+}
